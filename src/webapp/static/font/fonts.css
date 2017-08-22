@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url('/font/CaviarDreams.ttf');
+}
+
+@font-face {
+    font-family: 'CaviarDreams_Bold';
+    src: url('/font/CaviarDreams_Bold.ttf');
+}
+
+@font-face {
+    font-family: 'CaviarDreams_Italic';
+    src: url('/font/CaviarDreams_Italic.ttf');
+}
+
+@font-face {
+    font-family: 'CaviarDreams_BoldItalic';
+    src: url('/font/CaviarDreams_BoldItalic.ttf');
+}
+
+@font-face {
+    font-family: 'CelineDion';
+    src: url('/font/Celine_Dion_Handwriting.ttf');
+}
+
+@font-face {
+    font-family: 'Housegrind';
+    src: url('/font/Housegrind.ttf');
+}

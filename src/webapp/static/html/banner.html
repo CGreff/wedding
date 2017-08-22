@@ -1,0 +1,35 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="separator.html">
+
+<style>
+    .title {
+        font-family: CelineDion;
+        text-align: center;
+        font-size: 6rem;
+        margin: 0 0 .5em 0;
+    }
+</style>
+
+<dom-module id="banner-module">
+    <template>        
+        <separator-tag image="{{bouquetTop}}"></separator-tag>
+        <div class="title">Chris &amp; Buxi</div>
+        <separator-tag image="{{bouquetBottom}}"></separator-tag>
+    </template>
+
+    <script>
+        Polymer({
+             is: 'banner-module',
+             properties: {          
+                bouquetTop: {
+                    type: String,
+                    value: "../images/bouquet4.png"   
+                },
+                bouquetBottom: {
+                    type: String,
+                    value: "../images/bouquet8.png"
+                }             
+            },
+        });
+    </script>
+</dom-module>

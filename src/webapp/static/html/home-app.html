@@ -1,0 +1,81 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-pages/iron-pages.html">
+<link rel="import" href="../paper-tabs/paper-tabs.html">
+<link rel="import" href="about.html">
+<link rel="import" href="banner.html">
+<link rel="import" href="faq.html">
+<link rel="import" href="main.html">
+<link rel="import" href="separator.html">
+
+<style>
+    body {
+        background-color: #FFFEF5;
+        font-family: 'CaviarDreams';
+        font-size: 1.5em;
+        color: #4e1e1e;
+        max-width: 1085px;
+        margin: 0 auto;
+    }
+
+    body {
+        background-image: url(/images/bouquet6-3.png);
+         background-position-x: 700px; 
+        background-position-y: 350px;
+        background-repeat: no-repeat;
+        background-color: #FFFEF5;
+         background-attachment: fixed; 
+        background-size: 1300px auto;
+    }
+    
+    .divider {
+        border-bottom: 1px solid rgb(190,222,162);
+        margin: 1.5em 4em;
+    }
+
+    paper-tab.iron-selected {
+        font-family: CaviarDreams_Bold;
+    }
+</style>
+<dom-module id="home-app">
+    <style>
+        .navigation {
+            font-size: 1.4em;
+        }
+        
+        :root {
+            --paper-tab-ink: #FF9D80;
+            --paper-tabs-selection-bar-color: rgb(190,222,162);
+        }
+    </style>
+    <template>
+        <div class=background></div>
+        <banner-module></banner-module>
+        <paper-tabs class="navigation" selected="{{selected}}">
+            <paper-tab>About</paper-tab>
+            <paper-tab>Details</paper-tab>
+            <paper-tab>F.A.Q.</paper-tab>
+        </paper-tabs>
+        <iron-pages selected="{{selected}}">
+            <about-page></about-page>
+            <details-page></details-page>
+            <faq-page></faq-page>
+        </iron-pages>      
+        <separator-tag image="{{bannerBottom}}"></separator-tag>
+    </template>
+
+    <script>
+        Polymer({
+             is: 'home-app',
+            properties: {
+                selected: {
+                    type: Number,
+                    value: 1
+                },
+                bannerBottom: {
+                    type: String,
+                    value: "../images/bouquet7.png"
+                }
+            }
+        });
+    </script>
+</dom-module>

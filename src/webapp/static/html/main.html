@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<style>
+    .page-body {
+        text-align:center;
+    }
+
+    .map {
+        margin: 1em;
+    }
+</style>
+
+<dom-module id="details-page">
+    <template>        
+        <div class="page-body">
+            <h1>RSVP</h1>
+            - Insert Form Here -
+            <h1>When</h1>
+            <div class="date">11 / 11 / 2017</div>
+            <div class="time">Time TBD (Please check back)</div>
+            <h1>Where</h1>
+            <div class="address">
+                <div class="description">North Bank Park Pavillion</div>
+                <div class="line1">311 W. Long St.</div>
+                <div class="line2">Columbus, OH 43215</div>
+                <iframe class="map" width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNz4NrTyPOIgR_VXgrPT2oaA&key=AIzaSyDr9WzwQPecz74w7wBvCXBkSydW_NfkqNQ" allowfullscreen></iframe>
+            </div>
+        </div>    
+    </template>
+
+    <script>
+        Polymer({
+             is: 'details-page'
+        });
+    </script>
+</dom-module>

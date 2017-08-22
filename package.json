@@ -1,0 +1,26 @@
+{
+  "name": "home",
+  "version": "1.0.0",
+  "description": "Home Page",
+  "main": "src/home-app/js/app.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CGreff/home.git"
+  },
+  "scripts": {
+    "start": "node src/webapp/js/app.js"
+  },
+  "author": "Chris Greff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CGreff/home/issues"
+  },
+  "homepage": "https://github.com/CGreff/home#readme",
+  "devDependencies": {
+    "koa": "2.3.0",
+    "koa-static": "^4.0.1"
+  }
+}

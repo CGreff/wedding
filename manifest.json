@@ -1,0 +1,7 @@
+{
+  "name": "wedding",
+  "short_name": "wedding",
+  "description": "Chris & Buxi's Wedding Extravaganza",
+  "start_url": "/",
+  "display": "standalone"
+}

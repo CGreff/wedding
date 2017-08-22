@@ -1,0 +1,30 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<style>
+    .separator > img {
+        max-width: 300px;
+        height: auto;
+    }
+
+    .separator {
+        width: 300px;
+        margin: 1em auto 1.5em auto;
+    }
+</style>
+
+<dom-module id="separator-tag">
+    <template>
+        <div class="separator">
+            <img src="{{image}}" alt="bouquet separator">
+        </div>
+    </template>
+
+    <script>
+        Polymer({
+             is: 'separator-tag' ,
+             properties: {
+                image: { type: String }
+             }
+        });
+    </script>
+</dom-module>
