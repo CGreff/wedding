@@ -18,6 +18,9 @@
   "bugs": {
     "url": "https://github.com/CGreff/home/issues"
   },
+  "engines": {
+    "node": "8.4.0"
+  },
   "homepage": "https://github.com/CGreff/home#readme",
   "devDependencies": {
     "koa": "2.3.0",
