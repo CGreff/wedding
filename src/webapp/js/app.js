@@ -4,6 +4,7 @@ const app = new Koa()
 
 app.use(serve('src/webapp/static'))
 app.use(serve('bower_components'))
-app.listen(3000)
+var port =  process.env.PORT || 3000;
+app.listen(port);
 
 console.log('listening on port 3000')
