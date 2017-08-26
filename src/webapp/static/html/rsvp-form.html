@@ -47,9 +47,9 @@
             <paper-input id="name-field" class="form-text" label="Name"></paper-input>
             
             <label id="label">Attending:</label>
-            <paper-radio-group class="form-text"  selected="true" aria-labelledby="label">
-                <paper-radio-button class="form-text">Yes</paper-radio-button>
-                <paper-radio-button class="form-text">No</paper-radio-button>
+            <paper-radio-group selected="bar" aria-labelledby="label">
+                <paper-radio-button class="form-text" name="foo">Yes</paper-radio-button>
+                <paper-radio-button class="form-text" name="bar">No</paper-radio-button>
             </paper-radio-group>
 
             <paper-button raised onclick="rsvp.submit()" id="submit">Submit</paper-button>
