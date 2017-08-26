@@ -7,7 +7,7 @@
 <link rel="import" href="main.html">
 <link rel="import" href="separator.html">
 
-<style>
+<style is=custom-style>
     body {
         background-color: #FFFEF5;
         font-family: 'CaviarDreams';
@@ -16,6 +16,12 @@
         max-width: 1085px;
         margin: 0 auto;
     }
+
+    :root {
+    --paper-font-common-base: {
+        font-family: 'CaviarDreams';
+    };
+}
 
     body {
         background-image: url(/images/bouquet6-3.png);
@@ -29,13 +35,10 @@
     
     .divider {
         border-bottom: 1px solid rgb(190,222,162);
-        margin: 1.5em 4em;
-    }
-
-    paper-tab.iron-selected {
-        font-family: CaviarDreams_Bold;
+        margin: 1.5em 4em;      
     }
 </style>
+
 <dom-module id="home-app">
     <style>
         .navigation {

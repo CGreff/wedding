@@ -24,6 +24,8 @@
   "homepage": "https://github.com/CGreff/home#readme",
   "devDependencies": {
     "koa": "2.3.0",
+    "koa-body": "^2.3.0",
+    "koa-router": "^7.2.1",
     "koa-static": "^4.0.1"
   }
 }

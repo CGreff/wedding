@@ -1,0 +1,74 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../iron-form/iron-form.html">
+<link rel="import" href="../paper-radio-button-group/paper-radio-button-group.html">
+<link rel="import" href="../paper-radio-button/paper-radio-button.html">
+<link rel="import" href="../paper-button/paper-button.html">
+
+<style>
+    .container {
+        width: 40%;
+        margin: 0 auto;        
+    }
+
+    .form-text {
+        font-family: 'CaviarDreams';
+    }
+
+    label {
+        display: block;
+        font-family: 'CaviarDreams_Italic';
+    }
+
+    #submit {
+        background-color: rgb(190,222,162);
+        display: block;
+        width: 30%;
+        margin: 0 auto;
+    }
+</style>
+
+<style is=custom-style>
+    :root {
+        --paper-input-container-input: {
+          font-size: 2em;
+        };
+
+        --primary-color: #4e1e1e;
+        --paper-button-ink-color: #FF9D80;
+        
+      }
+</style>
+
+<dom-module id="rsvp-form">
+    <template>        
+        <iron-form id="rsvp" class="container">
+            <form action="/rsvp" method="post">
+            <paper-input id="name-field" class="form-text" label="Name"></paper-input>
+            
+            <label id="label">Attending:</label>
+            <paper-radio-group class="form-text"  selected="true" aria-labelledby="label">
+                <paper-radio-button class="form-text">Yes</paper-radio-button>
+                <paper-radio-button class="form-text">No</paper-radio-button>
+            </paper-radio-group>
+
+            <paper-button raised onclick="rsvp.submit()" id="submit">Submit</paper-button>
+            </form>
+        </iron-form>
+    
+        <!-- <iron-form id="rsvp">
+                <form method="post" action="/form">
+                  <input type="text" name="name" value="Batman">
+                  <input type="checkbox" name="donuts" checked> I like donuts<br>
+                  <paper-checkbox name="cheese" value="yes" checked></paper-checkbox>
+                  <paper-button raised onclick="rsvp.submit()" id="submit">Submit</paper-button>
+                </form>
+              </iron-form> -->
+    </template>
+
+    <script>
+        Polymer({
+             is: 'rsvp-form'
+        });
+    </script>
+</dom-module>
