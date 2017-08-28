@@ -1,7 +1,7 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../paper-input/paper-input.html">
 <link rel="import" href="../iron-form/iron-form.html">
-<link rel="import" href="../paper-radio-button-group/paper-radio-button-group.html">
+<link rel="import" href="../paper-radio-group/paper-radio-group.html">
 <link rel="import" href="../paper-radio-button/paper-radio-button.html">
 <link rel="import" href="../paper-button/paper-button.html">
 
@@ -26,6 +26,12 @@
         width: 30%;
         margin: 0 auto;
     }
+
+    .padding {
+        display: block;
+        width:100%;
+        padding: .6em;
+    }
 </style>
 
 <style is=custom-style>
@@ -33,42 +39,49 @@
         --paper-input-container-input: {
           font-size: 2em;
         };
-
         --primary-color: #4e1e1e;
-        --paper-button-ink-color: #FF9D80;
-        
+        --paper-button-ink-color: #FF9D80;        
       }
 </style>
 
 <dom-module id="rsvp-form">
     <template>        
-        <iron-form id="rsvp" class="container">
-            <form action="/rsvp" method="post">
-            <paper-input id="name-field" class="form-text" label="Name"></paper-input>
-            
-            <label id="label">Attending:</label>
-            <paper-radio-group selected="bar" aria-labelledby="label">
-                <paper-radio-button class="form-text" name="foo">Yes</paper-radio-button>
-                <paper-radio-button class="form-text" name="bar">No</paper-radio-button>
-            </paper-radio-group>
+            <iron-form id="rsvp" class="container">
+                <form action="/rsvp" method="get">
+                    <paper-input id="name-field" class="form-text" label="Name" name="name"></paper-input>
+                    
+                    <div class="padding"></div>
 
-            <paper-button raised onclick="rsvp.submit()" id="submit">Submit</paper-button>
-            </form>
-        </iron-form>
-    
-        <!-- <iron-form id="rsvp">
-                <form method="post" action="/form">
-                  <input type="text" name="name" value="Batman">
-                  <input type="checkbox" name="donuts" checked> I like donuts<br>
-                  <paper-checkbox name="cheese" value="yes" checked></paper-checkbox>
-                  <paper-button raised onclick="rsvp.submit()" id="submit">Submit</paper-button>
+                    <label id="attendance">Attending</label>
+                    <paper-radio-group selected="true" aria-labelledby="attendance">
+                        <paper-radio-button class="form-text radio" name="true" value="true">Yes</paper-radio-button>
+                        <paper-radio-button class="form-text radio" name="false" value="true">No</paper-radio-button>
+                    </paper-radio-group>
+
+                    <div class="padding"></div>
+
+                    <label id="diet">Dietary Restriction</label>
+                    <paper-radio-group selected="diet-all" aria-labelledby="diet">
+                        <paper-radio-button class="form-text radio" name="all" value="true">None</paper-radio-button>
+                        <paper-radio-button class="form-text radio" name="vegetarian" value="true">Vegetarian</paper-radio-button>
+                        <paper-radio-button class="form-text radio" name="vegan" value="true">Vegan</paper-radio-button>
+                    </paper-radio-group>
+
+                    <div class="padding"></div>
+                    
+                    <paper-button raised on-tap="submitForm" id="submit">Submit</paper-button>
                 </form>
-              </iron-form> -->
+            </iron-form>
+
     </template>
 
     <script>
         Polymer({
-             is: 'rsvp-form'
+             is: 'rsvp-form',
+
+            submitForm: function() {
+                 rsvp.submit();
+             }
         });
     </script>
 </dom-module>

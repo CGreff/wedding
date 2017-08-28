@@ -9,38 +9,36 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../../polymer/polymer.html">
-<link rel="import" href="../iron-menu-behavior.html">
+<link rel="import" href="test-menu.html">
 
-<dom-module id="test-menu">
-
+<dom-module id="test-nested-menu">
   <template>
-
-    <slot></slot>
-
-    <div id="extraContent" tabindex="-1">focusable extra content</div>
-
+    <style>
+      .ghost, [hidden] {
+        display: none !important;
+      }
+      .invisible {
+        visibility: hidden;
+      }
+    </style>
+    <test-menu id="actualMenu">
+      <div>item 1</div>
+      <div hidden>item 2</div>
+      <div class="ghost">item 3</div>
+      <div class="invisible">item 3.1</div>
+      <div>item 4</div>
+      <div hidden>item 5</div>
+      <div class="ghost">item 6</div>
+    </test-menu>
   </template>
-
 </dom-module>
 
 <script>
 
 (function() {
-
   Polymer({
-
-    is: 'test-menu',
-
-    behaviors: [
-      Polymer.IronMenuBehavior
-    ],
-
-    get extraContent() {
-      return this.$.extraContent;
-    }
-
+    is: 'test-nested-menu',
   });
-
 })();
 
 </script>

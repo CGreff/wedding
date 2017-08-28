@@ -73,6 +73,6 @@
     "commit": "f1c9b04b9d2d57334192537736a61e22708cd7b4"
   },
   "_source": "https://github.com/PolymerElements/iron-form.git",
-  "_target": "*",
+  "_target": "2.0.0",
   "_originalSource": "PolymerElements/iron-form"
 }

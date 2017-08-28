@@ -3,22 +3,24 @@
   "description": "Chris&#39; Home Page",
   "main": "index.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#*",
-    "paper-tabs": "PolymerElements/paper-tabs#^*",
-    "iron-pages": "PolymerElements/iron-pages#^*",
-    "paper-input": "PolymerElements/paper-input#*",
-    "paper-radio-button": "PolymerElements/paper-radio-button#*",
-    "paper-radio-group": "PolymerElements/paper-radio-group#*",
-    "iron-form": "PolymerElements/iron-form#*",
-    "paper-button": "PolymerElements/paper-button#*"
+    "polymer": "Polymer/polymer#2.0.2",
+    "paper-tabs": "PolymerElements/paper-tabs#^2.0.0",
+    "iron-pages": "PolymerElements/iron-pages#^2.0.0",
+    "paper-input": "PolymerElements/paper-input#2.0.1",
+    "paper-radio-button": "PolymerElements/paper-radio-button#2.0.0",
+    "paper-radio-group": "PolymerElements/paper-radio-group#2.0.0",
+    "iron-form": "PolymerElements/iron-form#2.0.0",
+    "paper-button": "PolymerElements/paper-button#2.0.0",
+    "iron-selector": "PolymerElements/iron-selector#^2.0.0"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
     "web-component-tester": "^4.0.0",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^*"
+    "webcomponentsjs": "webcomponents/webcomponentsjs#0.7.24"
   },
   "resolutions": {
-    "paper-button": "^1.0.0"
+    "paper-button": "^1.0.0",
+    "iron-selector": "^2.0.0"
   }
 }
