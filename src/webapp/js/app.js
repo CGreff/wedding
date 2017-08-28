@@ -6,7 +6,6 @@ const app = new Koa()
 const router = new Router()
 
 router.get('/rsvp', function (ctx, next) {
-    console.log(ctx);
     var rsvp = {}
     var query = ctx.request.url.split("?")[1];
     query.split("&").forEach(function(part, index, array) {
