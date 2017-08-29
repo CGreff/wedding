@@ -22,7 +22,7 @@
     "node": "8.4.0"
   },
   "homepage": "https://github.com/CGreff/home#readme",
-  "devDependencies": {
+  "dependencies": {
     "koa": "2.3.0",
     "koa-body": "^2.3.0",
     "koa-router": "^7.2.1",
