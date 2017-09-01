@@ -1,0 +1,14 @@
+{
+  "name": "web-animations-next",
+  "homepage": "https://github.com/web-animations/web-animations-next",
+  "_release": "cdae0778bb",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "cdae0778bbdb1e2bceaf6e40989668b69af202aa"
+  },
+  "_source": "https://github.com/web-animations/web-animations-next.git",
+  "_target": "*",
+  "_originalSource": "web-animations/web-animations-next",
+  "_direct": true
+}

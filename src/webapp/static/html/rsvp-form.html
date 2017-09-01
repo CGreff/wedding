@@ -4,6 +4,9 @@
 <link rel="import" href="../paper-radio-group/paper-radio-group.html">
 <link rel="import" href="../paper-radio-button/paper-radio-button.html">
 <link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../paper-dialog/paper-dialog.html">
+<link rel="import" href="../neon-animation/neon-animation.html">
+<script src="../web-animations-js/web-animations-next.min.js"></script>
 
 <style>
     .container {
@@ -48,7 +51,7 @@
     <template>        
             <iron-form id="rsvp" class="container">
                 <form action="/rsvp" method="get">
-                    <paper-input id="name-field" class="form-text" label="Name" name="name"></paper-input>
+                    <paper-input id="name" class="form-text" label="Name" name="name"></paper-input>
                     
                     <div class="padding"></div>
 
@@ -70,6 +73,10 @@
                     <div class="padding"></div>
                     
                     <paper-button raised on-tap="submitForm" id="submit">Submit</paper-button>
+                    <paper-dialog id="dialog" entry-animation="scale-up-animation" exit-animation="fade-out-animation" with-backdrop>
+                        <h2>Thanks for your RSVP<span id="your-name-here">{{name}}</span>!</h2>
+                        <p>We're excited to see you there!</p>
+                    </paper-dialog>
                 </form>
             </iron-form>
 
@@ -78,9 +85,14 @@
     <script>
         Polymer({
              is: 'rsvp-form',
-
+            properties: {
+                name: String
+            },
             submitForm: function() {
                  rsvp.submit();
+                 this.name = " " + this.$.name.value;
+                 this.$.name.value = "";
+                 dialog.open()
              }
         });
     </script>
