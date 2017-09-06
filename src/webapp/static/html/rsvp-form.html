@@ -57,7 +57,7 @@
 
                     <label id="attendance">Attending</label>
                     <paper-radio-group selected="true" aria-labelledby="attendance">
-                        <paper-radio-button class="form-text radio" name="true" value="true">Yes</paper-radio-button>
+                        <paper-radio-button id="attending" class="form-text radio" name="true" value="true">Yes</paper-radio-button>
                         <paper-radio-button class="form-text radio" name="false" value="true">No</paper-radio-button>
                     </paper-radio-group>
 
@@ -75,7 +75,7 @@
                     <paper-button raised on-tap="submitForm" id="submit">Submit</paper-button>
                     <paper-dialog id="dialog" entry-animation="scale-up-animation" exit-animation="fade-out-animation" with-backdrop>
                         <h2>Thanks for your RSVP<span id="your-name-here">{{name}}</span>!</h2>
-                        <p>We're excited to see you there!</p>
+                        <p>{{dialogText}}</p>
                     </paper-dialog>
                 </form>
             </iron-form>
@@ -85,12 +85,14 @@
         Polymer({
              is: 'rsvp-form',
             properties: {
-                name: String
+                name: String,
+                dialogText: String
             },
             submitForm: function() {
                  rsvp.submit();
                  this.name = " " + this.$.name.value;
                  this.$.name.value = "";
+                 this.dialogText = this.$.attending.checked ? "We're excited to see you there!" : "We're sad you can't make it!";
                  dialog.open()
              }
         });
